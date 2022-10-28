@@ -34,6 +34,11 @@ The config file should have the exact sample names (excluding `_R<1,2>.fastq` su
 ```
 bash run_snakemake.sh
 ```
-
-
-
+DAG of this snakemake workflow
+---------------------------
+The following image shows the directed acyclic graph (DAG) of jobs where the edges represent dependencies.
+![title](RULE_DAG.pdf)
+It can be obtained by running the following command in the snakemake conda environment:
+```bash
+snakemake --forceall --rulegraph | dot -Tpdf > RULE_DAG.pdf
+```
