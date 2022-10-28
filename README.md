@@ -36,9 +36,9 @@ bash run_snakemake.sh
 ```
 DAG of this snakemake workflow
 ---------------------------
-The following image shows the directed acyclic graph (DAG) of jobs where the edges represent dependencies.
-![title](RULE_DAG.pdf)
+The following image shows the directed acyclic graph (DAG) of jobs where the edges represent dependencies.        
+![RULE-DAG](RULE_DAG.png)        
 It can be obtained by running the following command in the snakemake conda environment:
 ```bash
-snakemake --forceall --rulegraph | dot -Tpdf > RULE_DAG.pdf
+snakemake --forceall --rulegraph | dot -Tpng > RULE_DAG.png
 ```
