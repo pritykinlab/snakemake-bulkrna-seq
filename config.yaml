@@ -1,0 +1,9 @@
+---
+rawdata: <path to the fatstq data directory>
+results: <path to the alignment/QC output directory>
+reference: <path to the complied reference database>
+samples:
+ - SAMPLE1
+ - SAMPLE2
+ - SAMPLE3
+...
