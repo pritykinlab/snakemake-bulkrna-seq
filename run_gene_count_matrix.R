@@ -20,7 +20,7 @@ bamfiles.full <- paste0(bamdir, "/", bamfiles)
 # genes and exons
 print("Prepare collection of all exons for genes in GENCODE")
 genes <- levels(as.factor(gencode$gene_name))
-exons <- gencode[gencode$type == 'exon']
+exons <- gencode[(gencode$gene_type == 'protein_coding') & (gencode$type == 'exon')]
 exons.genes <- disjoin(split(exons, factor(exons$gene_name, levels = genes)))
 print("prepared")
 
